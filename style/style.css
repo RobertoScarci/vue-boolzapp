@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #DADBD5;
+    position: relative;
+}
+
+header{
+    height: 15vh;
+    background-color: #009688;
+}
+
+main{
+    position: absolute;
+    width: 85vw;
+    height: 93vh;
+    background-color: white;
+    display: flex;
+    top: 1.6rem;
+    left: 7rem;
+}
