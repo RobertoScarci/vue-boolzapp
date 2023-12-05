@@ -19,7 +19,7 @@
     <header></header>
 
     <!-- div.app -->
-    <div class="app">
+    <div id="app">
 
         <!-- Main -->
         <main>
@@ -42,11 +42,30 @@
                     </div>
                 </div>
 
+                <!-- Notifications -->
                 <div class="notice">
                     <i class="fa-solid fa-bell-slash"></i>
                     <div>
                         <p>Ricevi notifiche di nuovi messaggi</p>
                         <a href="">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+
+                <!-- Searchbar -->
+                <div class="searchbar">
+                    <input type="name" placeholder="Cerca o inizia una nuova chat">
+                </div>
+
+                <!-- Contacts -->
+                <div class="chats">
+                    <div class="chatUser" v-for="user in contacts">
+                        <div class="imgWrap">
+                            <img :src="user.avatar" :alt="user.name + ' \'s avatar'">
+                        </div>
+                        <div class="info">
+                            <p class="username"> {{ user.name }} </p>
+                            <p class="lastMessage">Ultimo messaggio inviato</p>
+                        </div>
                     </div>
                 </div>
             </div>
