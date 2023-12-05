@@ -7,6 +7,7 @@
 body{
     background-color: #DADBD5;
     position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header{
@@ -42,4 +43,38 @@ div.profile{
     height: 10%;
     background-color: #EAEAEA;
     border-right: .2px solid rgb(165, 165, 165);
+}
+
+div.profile{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.profile *{
+    height: 80%;
+    margin-top: .4rem;
+    margin-left: .3rem;
+}
+
+div.my_profile{
+    display: flex;
+}
+
+div.my_profile img{
+    border-radius: 50%;
+}
+
+div.my_profile p{
+    padding-top: .8rem;
+}
+
+div.settings{
+    padding-top: .8rem;
+    padding-right: .7rem;
+    font-size: 20px;
+    color: #B1B1B1;
+}
+
+div.settings *{
+    margin-right: .3rem;
 }
