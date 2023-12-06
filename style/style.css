@@ -191,8 +191,8 @@ div.chats span{
 
 div.messages{
     height: 80%;
+    padding-top: 1rem;
     background-image: url('../img/mine.jpg');
-    padding: 2rem;
 }
 
 div.messages > article.message{
