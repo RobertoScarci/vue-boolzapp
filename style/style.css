@@ -7,25 +7,32 @@
 /* Body */
 
 body{
-    background-color: #DADBD5;
-    position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header{
-    height: 15vh;
-    background-color: #009688;
+div#app{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #009688 0px, #009688 15vh,
+    #dddbd1 15vh, #d2dbdc 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clearflix::after{
+    display: block;
+    clear: both;
+    content:'';
 }
 
 /* Main */
 main{
-    position: absolute;
     width: 85vw;
     height: 93vh;
     background-color: white;
     display: flex;
-    top: 1.6rem;
-    left: 7rem;
 }
 
 div.contact{
@@ -46,9 +53,6 @@ div.profile{
     height: 10%;
     background-color: #EAEAEA;
     border-right: .2px solid rgb(165, 165, 165);
-}
-
-div.profile{
     display: flex;
     justify-content: space-between;
 }
@@ -80,7 +84,7 @@ div.settings{
 }
 
 div.settings *{
-    margin-right: .5rem;
+    margin-right: .7rem;
 }
 
 div.settings i:hover{
@@ -123,11 +127,11 @@ div.searchbar{
 }
 
 div.searchbar input{
-    height: 80%;
-    width: 98%;
+    height: 77%;
+    width: 95%;
     border: none;
     text-align: center;
-    margin-left: .2rem;
+    margin-left: .5rem;
     margin-top: .3rem;
     border-radius: 8px;
 }
@@ -143,6 +147,7 @@ div.searchbar input{
     display: flex;
     background-color: white;
     border-bottom: .2px solid rgb(199, 199, 199);
+    position: relative;
 }
 
 .chats .chatUser .imgWrap {
@@ -162,10 +167,86 @@ div.searchbar input{
     color: #8c8a8a;
 }
 
+.chatUser:hover{
+    background-color: #EAEBEB;
+}
+
 .username{
     font-size: 17px;
 }
 
 .info p{
     margin-top: .2rem;
+}
+
+div.chats span{
+    position: absolute;
+    font-size: 10px;
+    color: #8c8a8a;
+    right: 6px;
+    top: 4px;
+}
+
+/* Chat */
+
+div.messages{
+    height: 80%;
+    background-image: url('../img/mine.jpg');
+    padding: 2rem;
+}
+
+div.messages > article.message{
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    margin: 0 2rem .8rem 2rem;
+    background-color: #8edafc;
+    font-size: 13px;
+    clear: both;
+}
+
+div.messages > article.message.received{
+    float: left;
+    background-color: #ffffff;
+    margin-right: 7rem;
+    padding-right: 3rem;
+    position: relative;
+}
+
+div.messages > article.message.sent{
+    float: right;
+    background-color: #d5f9ba;
+    margin-left: 7rem;
+    padding-right: 3rem;
+    position: relative;
+}
+
+.messages span{
+    position: absolute;
+    font-size: 8px;
+    color: grey;
+    bottom: 2px;
+    right: 9px;
+    padding: .2rem;
+}
+
+div.message-input{
+    height: 10%;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.message-input input{
+    width: 80%;
+    height: 75%;
+    border-radius: 7px;
+    border: none;
+    padding-left: 1rem;
+}
+
+div.message-input i{
+    margin: 0 2rem;
+    font-size: 20px;
+    color: #8c8a8a;
 }

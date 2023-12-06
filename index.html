@@ -16,8 +16,6 @@
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <header></header>
-
     <!-- div.app -->
     <div id="app">
 
@@ -65,6 +63,7 @@
                         <div class="info">
                             <p class="username"> {{ user.name }} </p>
                             <p class="lastMessage">Ultimo messaggio inviato</p>
+                            <span> 12:00 </span>
                         </div>
                     </div>
                 </div>
@@ -73,6 +72,41 @@
             <!-- Chat -->
             <div class="chat">
                 <div class="profile">
+                    <div class="my_profile">
+                        <img src="./img/avatar_1.jpg" alt="">
+                        <p>Michele</p>
+                        <p>Ultimo accesso oggi alle 12:00</p>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="settings">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div class="messages clearfix">
+                    <article class="message received">
+                        Ciao Sofia, come va?
+                        <span> 11:30 </span>
+                    </article>
+                    <article class="message sent">
+                        Tutto bene, tu che stai facendo?
+                        <span> 11:34 </span>
+                    </article>
+                    <article class="message received">
+                        Sto preparando una bella pizza, vuoi venire?
+                        <span> 11:45 </span>
+                    </article>
+                    <article class="message sent">
+                        Certo!
+                        <span> 11:53 </span>
+                    </article>
+                </div>
+                <div class="message-input">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="name" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>
         </main>
