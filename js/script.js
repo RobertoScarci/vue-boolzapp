@@ -171,11 +171,10 @@ createApp({
         }
     },
     methods: {
-        changeChat(index) { this.activeIndex = index++ },
+        changeChat(index){
+             this.activeIndex = index ;
+            },
 
-        removeMessage(index, activeIndex) {
-            this.contacts[activeIndex].messages.splice(index, 0);
-        }, 
         addNewMessage() {
             this.newMessage != "" ? this.contacts[this.activeIndex].messages.push({ date: '12:00', message: this.newMessage, status: 'sent'}) : '';
             this.newMessage = "";
