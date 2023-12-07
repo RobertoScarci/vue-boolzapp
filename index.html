@@ -56,7 +56,7 @@
 
                 <!-- Contacts -->
                 <div class="chats">
-                    <div class="chatUser" v-for="(user, index) in contacts" :class="index = activeIndex ? 'active grey' : ''" @click="changeChat(index)">
+                    <div class="chatUser" v-for="(user, activeIndex) in contacts" :class="index = activeIndex ? 'active' : ''" @click="changeChat(activeIndex)">
                         <div class="imgWrap">
                             <img :src="user.avatar" :alt="user.name + ' \'s avatar'">
                         </div>
